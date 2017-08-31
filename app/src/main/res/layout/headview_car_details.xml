@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="192dp">
+
+        <ImageView
+            android:id="@+id/carPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/guidePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/common_line_margin"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:text="厂商指导价:18.49万"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_hint" />
+
+        <TextView
+            android:id="@+id/carName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/guidePrice"
+            android:paddingLeft="@dimen/padding_edge_common"
+            android:text="奥迪A3"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_toolbar" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/carModel"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/common_gray"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/padding_edge_common"
+        android:text="1.4升  涡轮增压  150马力"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_size_title" />
+
+
+</LinearLayout>

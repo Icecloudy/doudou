@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutHead"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_header_height"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+
+            <com.lexing.passenger.views.RoundAngleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imgHead"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:src="@drawable/ic_head"
+                app:roundWidth="33dp"
+                app:roundHeight="33dp"
+                />
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/imgHead"
+                android:layout_toRightOf="@+id/imgHead"
+                android:text="吴彦祖" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common" />
+
+        <TextView
+            android:id="@+id/nav_record"
+            style="@style/TextView.Left"
+            android:layout_marginTop="@dimen/padding_edge_common"
+            android:drawableLeft="@drawable/nav_record"
+            android:drawableStart="@drawable/nav_record"
+            android:drawablePadding="@dimen/padding_edge_common"
+            android:text="@string/nav_record"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/nav_wallet"
+            style="@style/TextView.Left"
+            android:drawableLeft="@drawable/nav_wallet"
+            android:drawableStart="@drawable/nav_wallet"
+            android:drawablePadding="@dimen/padding_edge_common"
+            android:text="@string/nav_wallet"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/nav_score"
+            style="@style/TextView.Left"
+            android:drawableLeft="@drawable/nav_score"
+            android:drawableStart="@drawable/nav_score"
+            android:drawablePadding="@dimen/padding_edge_common"
+            android:text="@string/nav_score"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+        <TextView
+            android:id="@+id/nav_coupon"
+            style="@style/TextView.Left"
+            android:drawableLeft="@drawable/nav_coupon"
+            android:drawableStart="@drawable/nav_coupon"
+            android:drawablePadding="@dimen/padding_edge_common"
+            android:text="@string/nav_coupon"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+            <TextView
+                android:id="@+id/nav_share"
+                style="@style/TextView.Left"
+                android:drawableLeft="@drawable/nav_reward"
+                android:drawableStart="@drawable/nav_reward"
+                android:drawablePadding="@dimen/padding_edge_common"
+                android:text="@string/nav_share"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_title" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10sp"
+                android:text="@string/nav_share_sub"
+                android:layout_marginRight="@dimen/padding_edge_common"
+                android:layout_marginEnd="@dimen/padding_edge_common"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/nav_massage"
+            style="@style/TextView.Left"
+            android:drawableLeft="@drawable/nav_news"
+            android:drawableStart="@drawable/nav_news"
+            android:drawablePadding="@dimen/padding_edge_common"
+            android:text="@string/nav_massage"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/nav_invoice"
+            style="@style/TextView.Left"
+            android:drawableLeft="@drawable/nav_invoice"
+            android:drawableStart="@drawable/nav_invoice"
+            android:drawablePadding="@dimen/padding_edge_common"
+            android:text="@string/nav_invoice"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+        <TextView
+            android:id="@+id/nav_service"
+            style="@style/TextView.Left"
+            android:drawableLeft="@drawable/nav_service"
+            android:drawableStart="@drawable/nav_service"
+            android:drawablePadding="@dimen/padding_edge_common"
+            android:text="@string/nav_service"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+        <TextView
+            android:layout_marginBottom="120dp"
+            android:id="@+id/nav_setting"
+            style="@style/TextView.Left"
+            android:drawableLeft="@drawable/nav_settings"
+            android:drawableStart="@drawable/nav_settings"
+            android:drawablePadding="@dimen/padding_edge_common"
+            android:text="@string/nav_setting"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutItem"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/shape_money_unselect_bg">
+    <View
+        android:id="@+id/centerView"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent" />
+
+    <TextView
+        android:id="@+id/tvPayMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/centerView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/pay_money"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_size_title" />
+
+    <TextView
+        android:id="@+id/tvGiveMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centerView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/give_money"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/text_size_hint"/>
+
+</RelativeLayout>

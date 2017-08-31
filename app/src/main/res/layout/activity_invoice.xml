@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_invoice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_gray"
+    tools:context="com.lexing.passenger.ui.profile.invoice.InvoiceActivity">
+    <View
+        style="@style/LineDivide"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:id="@+id/tvTrip"
+        style="@style/TextView.Clickable"
+        android:text="@string/invoice_trip" />
+
+    <View
+        style="@style/LineEdge"
+        android:layout_marginLeft="@dimen/padding_edge_common" />
+    <!--用户协议-->
+    <TextView
+        android:id="@+id/tvHistory"
+        style="@style/TextView.Clickable"
+        android:text="@string/invoice_history" />
+    <View
+        style="@style/LineDivide" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invoice_tips"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_hint"
+        android:layout_margin="@dimen/padding_edge_common"/>
+</LinearLayout>

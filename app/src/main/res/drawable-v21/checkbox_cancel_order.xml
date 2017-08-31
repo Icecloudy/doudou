@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:gravity="center">
+                    <solid android:color="@color/white"/>
+                </shape>
+            </item>
+            <item android:left="@dimen/padding_edge_common">
+                <bitmap
+                    android:gravity="left"
+                    android:src="@drawable/select_checked"/>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_checked="false">
+        <layer-list>
+            <item >
+                <shape android:gravity="center">
+                    <solid android:color="@color/white"/>
+                </shape>
+            </item>
+            <item android:left="@dimen/padding_edge_common">
+                <bitmap
+                    android:gravity="left"
+                    android:src="@drawable/select_unchecked"/>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

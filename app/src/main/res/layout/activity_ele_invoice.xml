@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_ele_invoice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_gray"
+        android:orientation="vertical"
+        tools:context="com.lexing.passenger.ui.profile.invoice.EleInvoiceActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/common_line_margin"
+            android:text="发票详情" />
+        <!--头像-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+            <!--姓名-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item">
+
+                <TextView
+                    style="@style/TextView.Left"
+                    android:text="公司抬头" />
+
+                <EditText
+                    android:id="@+id/editCompanyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="92dp"
+                    android:background="@null"
+                    android:hint="填写公司抬头"
+                    android:maxLines="1"
+                    android:textColor="@color/text_title" />
+            </RelativeLayout>
+
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+            <!--性别-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item">
+
+                <TextView
+                    style="@style/TextView.Left"
+                    android:text="发票内容" />
+
+                <TextView
+                    android:id="@+id/editInvoiceContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="92dp"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:text="客运服务费"
+                    android:maxLines="1"
+                    android:textColor="@color/text_title" />
+            </RelativeLayout>
+
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+            <!--手机-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item">
+
+                <TextView
+                    style="@style/TextView.Left"
+                    android:text="发票金额" />
+
+                <TextView
+                    android:id="@+id/tvInvoiceMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="92dp"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+            <!--手机-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item">
+
+                <TextView
+                    style="@style/TextView.Clickable"
+                    android:text="更多信息" />
+
+                <TextView
+                    android:id="@+id/moreInfo"
+                    style="@style/TextView.Right"
+                    android:background="@null"
+                    android:hint="填写购买方、备注、收款人等"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/padding_edge_common"
+                    android:textSize="@dimen/text_size_hint"
+                    android:textColor="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <View style="@style/LineEdge" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/common_line_margin"
+            android:text="收件信息" />
+
+        <View style="@style/LineEdge" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="收件人" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="92dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="填写收件人"
+                android:maxLines="1"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+        <View style="@style/LineEdge" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="联系电话" />
+
+            <EditText
+                android:id="@+id/editMobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="92dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="填写联系电话"
+                android:maxLines="1"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+        <View style="@style/LineEdge" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="所在地区" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="92dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="请选择 | 请选择 | 请选择"
+                android:maxLines="1"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+        <View style="@style/LineEdge" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="详细地址" />
+
+            <EditText
+                android:id="@+id/editAddressDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="92dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="填写详细地址"
+                android:maxLines="1"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+        <View style="@style/LineEdge" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/common_line_margin"
+            android:text="@string/ele_invoice_tips"
+            android:textSize="@dimen/text_size_hint"/>
+
+        <RadioGroup
+            android:id="@+id/payRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/wxPay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:background="@drawable/select_pay_bg"
+                android:button="@null"
+                android:drawableLeft="@drawable/ic_wxpay"
+                android:drawablePadding="6dp"
+                android:drawableRight="@drawable/ic_invoice_pay_tips"
+                android:paddingRight="45dp"
+                android:text="@string/wx_pay" />
+
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+
+            <RadioButton
+                android:id="@+id/aliPay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:background="@drawable/select_pay_bg"
+                android:button="@null"
+                android:drawableLeft="@drawable/ic_alipay"
+                android:drawableRight="@drawable/ic_invoice_pay_tips"
+                android:paddingRight="45dp"
+                android:drawablePadding="6dp"
+                android:text="@string/ali_pay" />
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+
+            <RadioButton
+                android:id="@+id/codPay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:background="@drawable/select_pay_bg"
+                android:button="@null"
+                android:drawableRight="@drawable/ic_invoice_doc_tips"
+                android:paddingRight="45dp"
+                android:drawableLeft="@drawable/ic_cod_pay"
+                android:drawablePadding="6dp"
+                android:text="@string/cod_pay" />
+        </RadioGroup>
+
+        <View style="@style/LineEdge" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/submit"
+            style="@style/Button.Primary"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:layout_marginTop="52dp"
+            android:text="@string/submit"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>

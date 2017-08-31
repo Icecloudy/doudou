@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/lLayout_bg"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/shape_gray_border_bg"
+              android:orientation="vertical">
+    <TextView
+        android:id="@+id/textVieName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="正在通知附近的司机"
+        android:textColor="@color/text_title"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp">
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tvCenter"
+            android:text="00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="39sp"/>
+
+        <TextView
+            android:id="@+id/tvCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text=":"
+            android:textColor="@color/colorPrimary"
+            android:textSize="39sp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tvCenter"
+            android:text="00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="39sp"/>
+    </RelativeLayout>
+
+
+    <View
+        style="@style/LineEdge"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/tvDone"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_size_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item"
+        android:gravity="center"
+        android:text="取消订单"/>
+
+</LinearLayout>

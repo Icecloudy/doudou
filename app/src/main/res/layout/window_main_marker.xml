@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/infowindow_bg">
+
+    <RelativeLayout
+        android:id="@+id/layoutLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_info_window_bg">
+
+        <TextView
+            android:id="@+id/tvMinuter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_hint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMinuter"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="分钟"
+            android:textColor="@color/text_title"
+            android:textSize="9sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/markerTips"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/layoutLeft"
+        android:textColor="@color/text_title"
+        />
+</RelativeLayout>
+
+

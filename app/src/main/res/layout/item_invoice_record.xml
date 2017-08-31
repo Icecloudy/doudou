@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_gray"
+    android:orientation="vertical">
+
+    <View style="@style/LineEdge" />
+
+    <RelativeLayout
+        android:id="@+id/layoutInvoice"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@drawable/checkbox_invoice">
+
+        <TextView
+            android:id="@+id/setOutLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="60dp"
+            android:drawableLeft="@drawable/green_oval"
+            android:drawablePadding="10dp"
+            android:maxLines="1"
+            android:text="沙井地铁站B出口"
+            android:textColor="@color/text_title" />
+
+        <TextView
+            android:id="@+id/tvYuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:text="元"
+            android:textColor="@color/text_title" />
+
+        <TextView
+            android:id="@+id/tvInvoiceMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tvYuan"
+            android:text="50"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/EsLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setOutLocation"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/red_oval"
+            android:drawablePadding="10dp"
+            android:maxLines="1"
+            android:layout_marginRight="60dp"
+            android:text="深圳东火车站"
+            android:textColor="@color/text_title" />
+
+        <TextView
+            android:id="@+id/orderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/setOutLocation"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:drawablePadding="10dp"
+            android:text="2017-04"
+            android:textSize="@dimen/text_size_hint" />
+
+        <View style="@style/LineEdge" />
+
+    </RelativeLayout>
+
+    <View style="@style/LineEdge" />
+</LinearLayout>

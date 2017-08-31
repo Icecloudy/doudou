@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_free_pwd_pay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_gray"
+    android:orientation="vertical"
+    tools:context="com.lexing.passenger.ui.profile.settings.FreePwdPayActivity">
+
+    <View
+        style="@style/LineDivide"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/TextView.Left"
+            android:text="@string/wallet_free_password_pay" />
+
+        <Switch
+            android:id="@+id/switchPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:checked="true" />
+
+    </RelativeLayout>
+
+    <View style="@style/LineEdge" />
+</LinearLayout>

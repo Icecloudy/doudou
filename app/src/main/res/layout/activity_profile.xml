@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_gray"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.lexing.passenger.ui.profile.profile.ProfileActivity">
+
+    <View
+        style="@style/LineDivide"
+        android:layout_marginTop="10dp" />
+    <!--头像-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutChangeHead"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item"
+            android:background="@drawable/bg_white_clickable">
+
+
+            <com.lexing.passenger.views.RoundAngleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:src="@drawable/ic_head"
+                app:roundWidth="15dp"
+                app:roundHeight="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="72dp"
+                android:text="@string/change_head_img" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--姓名-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="72dp"
+                android:background="@null"
+                android:maxLines="1"
+                android:text="张三"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--性别-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="@string/sex" />
+
+            <TextView
+                android:id="@+id/editSex"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="72dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="请选择"
+                android:maxLines="1"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--手机-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="@string/mobile" />
+
+            <TextView
+                android:id="@+id/editMobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="72dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:text="186****1234"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+        <View style="@style/LineEdge" />
+    </LinearLayout>
+
+    <View
+        style="@style/LineDivide"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvChangePwd"
+            style="@style/TextView.Clickable"
+            android:text="@string/change_password" />
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--手机-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                android:id="@+id/tvAuthentication"
+                style="@style/TextView.Clickable"
+                android:text="@string/real_name_authentication" />
+
+            <TextView
+                android:id="@+id/tvIsAuthentication"
+                style="@style/TextView.Right"
+                android:layout_marginRight="30dp"
+                android:text="@string/not_authentication" />
+        </RelativeLayout>
+
+        <View style="@style/LineEdge" />
+    </LinearLayout>
+</LinearLayout>

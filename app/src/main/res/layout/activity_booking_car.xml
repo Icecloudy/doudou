@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_booking_car"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_gray"
+    android:orientation="vertical"
+    tools:context="com.lexing.passenger.ui.main.booking.BookingCarActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/padding_edge_common"
+            android:paddingRight="@dimen/padding_edge_common"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_back" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_record_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_common_clickable_item"
+            android:layout_centerHorizontal="true"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="25dp"
+            app:tabPaddingStart="25dp"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/text_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item"
+        android:layout_marginLeft="@dimen/padding_edge_common"
+        android:layout_marginRight="@dimen/padding_edge_common"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_gray_border_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_book_time"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:text="用车时间"
+            android:textColor="@color/text_hint" />
+
+        <TextView
+            android:id="@+id/tvBookingTime"
+            style="@style/TextView.Right"
+            android:hint="请选择用车时间"
+            android:textColor="@color/text_title" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_edge_common"
+        android:layout_marginRight="@dimen/padding_edge_common"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_gray_border_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+
+            <TextView
+                android:id="@+id/editSetOut"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:drawableLeft="@drawable/green_oval"
+                android:drawablePadding="5dp"
+                android:hint="请选择您的出发地"
+                android:gravity="center|left" />
+
+
+            <ImageView
+                android:id="@+id/setOUtVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_edge_common"
+                android:padding="5dp"
+                android:src="@drawable/ic_voice" />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                android:id="@+id/tvDestination"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:drawableLeft="@drawable/red_oval"
+                android:drawablePadding="5dp"
+                android:gravity="center|left"
+                android:hint="请选择您的目的地" />
+
+
+            <ImageView
+                android:id="@+id/destinationVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_edge_common"
+                android:padding="5dp"
+                android:src="@drawable/ic_voice" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/layoutCarType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item"
+        android:layout_marginLeft="@dimen/padding_edge_common"
+        android:layout_marginRight="@dimen/padding_edge_common"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_gray_border_bg">
+
+        <TextView
+            android:id="@+id/tvCarType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/padding_edge_common"
+            android:drawableRight="@drawable/ic_next"
+            android:paddingRight="@dimen/padding_edge_common"
+            android:hint="请选择商务车品牌" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_edge_common"
+        android:layout_marginRight="@dimen/padding_edge_common"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_gray_border_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="约" />
+
+            <TextView
+                android:id="@+id/tvEstimatedCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="0.0元"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="@dimen/padding_edge_common"
+            android:text="预估费用仅供参考，实际费用可能因交通情况、天气 等因素而不同" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnCallCarImmediately"
+            style="@style/Button.Primary"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:text="@string/call_car_immediately"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_enable_clickable"/>
+    </RelativeLayout>
+</LinearLayout>

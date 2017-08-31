@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_trip_record"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_gray"
+    tools:context="com.lexing.passenger.ui.profile.record.TripRecordActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/padding_edge_common"
+            android:paddingRight="@dimen/padding_edge_common"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_back" />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_record_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_common_clickable_item"
+            android:layout_centerHorizontal="true"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/text_title" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_record_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/shape_gray_border_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common">
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_common_clickable_item"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="请输入支付密码" />
+        </RelativeLayout>
+
+        <View style="@style/LineEdge" />
+
+        <com.lexing.passenger.views.PayPwdEditText
+            android:id="@+id/PayPwdEditText"
+            android:layout_width="match_parent"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="62dp"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+        </com.lexing.passenger.views.PayPwdEditText>
+    </LinearLayout>
+
+</RelativeLayout>

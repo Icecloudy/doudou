@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context="com.lexing.passenger.ui.main.ConfirmOrderActivity">
+
+
+    <LinearLayout
+        android:id="@+id/activity_confirm_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_gray"
+        android:orientation="vertical">
+
+        <View
+            style="@style/LineDivide"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_number"
+                style="@style/TextView.Left"
+                android:layout_height="44dp"
+                android:text="@string/order_number" />
+
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal">
+
+
+                <com.lexing.passenger.views.RoundAngleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/padding_edge_common"
+                    app:roundHeight="33dp"
+                    app:roundWidth="33dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp">
+
+                        <TextView
+                            android:id="@+id/diverName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="5dp"
+                            android:textColor="@color/text_title"
+                            android:textSize="@dimen/text_size_title" />
+
+                        <TextView
+                            android:id="@+id/tvDriverType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/diverName"
+                            android:background="@drawable/shape_car_type_bg"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            android:text="商务车"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/rating_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/tvDriverType"
+                            android:drawableLeft="@drawable/rating_small_star"
+                            android:drawablePadding="3dp"/>
+
+                        <TextView
+                            android:id="@+id/tvBillCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/rating_star" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/carNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="#e6e6e6"
+                            android:padding="5dp" />
+
+                        <TextView
+                            android:id="@+id/carType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/carNum"
+                            android:layout_marginTop="5dp"
+                            android:padding="5dp"/>
+
+                        <ImageView
+                            android:id="@+id/imgCallDiver"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/padding_edge_common"
+                            android:src="@drawable/ic_call_diver" />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/imgCallDiverVoice"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_toLeftOf="@+id/imgCallDiver"
+                            android:src="@drawable/ic_call_diver_voice" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginTop="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="订单金额"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:id="@+id/tvOrderMoney"
+                style="@style/TextView.Right"
+                android:text="@string/order_money"
+                android:textColor="#ff4045" />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="时长"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:id="@+id/tvOrderTime"
+                style="@style/TextView.Right"
+                android:text="@string/order_time"
+                android:textColor="@color/text_content" />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="行驶里程"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:id="@+id/tvOrderDistance"
+                style="@style/TextView.Right"
+                android:text="@string/order_distance"
+                android:textColor="@color/text_content" />
+        </RelativeLayout>
+
+        <View style="@style/LineEdge" />
+
+        <RadioGroup
+            android:id="@+id/payRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/common_gray"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/balancePay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:background="@drawable/select_confirm_order_bg"
+                android:button="@null"
+                android:drawableLeft="@drawable/ic_balance_pay"
+                android:drawablePadding="6dp"
+                android:text="@string/balance_pay" />
+
+            <RadioButton
+                android:id="@+id/wxPay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:background="@drawable/select_confirm_order_bg"
+                android:button="@null"
+                android:drawableLeft="@drawable/ic_wxpay"
+                android:drawablePadding="6dp"
+                android:text="@string/wx_pay" />
+
+            <RadioButton
+                android:id="@+id/aliPay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_common_clickable_item"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:background="@drawable/select_confirm_order_bg"
+                android:button="@null"
+                android:drawableLeft="@drawable/ic_alipay"
+                android:drawablePadding="6dp"
+                android:text="@string/ali_pay" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/layoutCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:background="@color/common_gray"
+                android:text="优惠券抵扣"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/Discount"
+                style="@style/TextView.Right"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/common_gray"
+                android:text="0元"
+                android:textColor="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/confirmPay"
+            style="@style/Button.Primary"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:layout_marginTop="28dp"
+            android:text="@string/confirm_pay"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>

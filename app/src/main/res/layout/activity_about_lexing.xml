@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about_lexing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_gray"
+    android:orientation="vertical"
+    tools:context="com.lexing.passenger.ui.profile.settings.AboutLexingActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/app_logo" />
+    </RelativeLayout>
+
+    <View style="@style/LineDivide" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutWeChat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="@string/lexing_wechat" />
+
+            <TextView
+                android:id="@+id/wechat"
+                style="@style/TextView.Right" />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="@string/lexing_sina" />
+
+            <TextView
+                style="@style/TextView.Right"
+                android:id="@+id/sina"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="@string/lexing_email" />
+
+            <TextView
+                style="@style/TextView.Right"
+                android:id="@+id/email"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvCopyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/copyright" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvCopyright"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/version_info" />
+
+    </RelativeLayout>
+</LinearLayout>

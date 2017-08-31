@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context="com.lexing.passenger.ui.main.OpinionDriverActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_opinion_driver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:text="@string/opinion_driver"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_toolbar" />
+
+        </android.support.v7.widget.Toolbar>
+        <View style="@style/LineEdge"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <com.lexing.passenger.views.RoundAngleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:src="@drawable/ic_head"
+                app:roundHeight="33dp"
+                app:roundWidth="33dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp">
+
+                    <TextView
+                        android:id="@+id/diverName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:text="张师傅"
+                        android:textColor="@color/text_title"
+                        android:textSize="@dimen/text_size_title" />
+
+                    <TextView
+                        android:id="@+id/tvDriverType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/diverName"
+                        android:background="@drawable/shape_car_type_bg"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:text="商务车"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/rating_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tvDriverType"
+                        android:drawableLeft="@drawable/rating_small_star"
+                        android:drawablePadding="3dp"
+                        android:text="4.9" />
+
+                    <TextView
+                        android:id="@+id/tvBillCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/rating_star"
+                        android:text="200单" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/carNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="#e6e6e6"
+                        android:padding="5dp"
+                        android:text="粤B4A72R" />
+
+                    <TextView
+                        android:id="@+id/carType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carNum"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="白色•野马T80" />
+
+                    <ImageView
+                        android:id="@+id/imgCallDiver"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/padding_edge_common"
+                        android:src="@drawable/ic_call_diver" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/imgCallDiverVoice"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_toLeftOf="@+id/imgCallDiver"
+                        android:src="@drawable/ic_call_diver_voice" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <RatingBar
+
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:max="5"
+                android:stepSize="1" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_opinion_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="驾驶平稳"
+                android:textColor="@color/color_select_opinion" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <CheckBox
+                android:id="@+id/cb2"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_opinion_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="服务态度好"
+                android:textColor="@color/color_select_opinion" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <CheckBox
+                android:id="@+id/cb3"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_opinion_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="路线熟悉"
+                android:textColor="@color/color_select_opinion" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <CheckBox
+                android:id="@+id/cb4"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_opinion_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="非常有礼貌"
+                android:textColor="@color/color_select_opinion" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb5"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_opinion_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="师傅人帅"
+                android:textColor="@color/color_select_opinion" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_opinion_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:visibility="invisible" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_opinion_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:visibility="invisible" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_opinion_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_margin="@dimen/padding_edge_common"
+            android:background="@drawable/shape_gray_border_bg"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editFeedbackContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@null"
+                android:hint="请对司机师傅的服务进行评价"
+                android:padding="15dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/submit"
+            style="@style/Button.Primary"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:layout_marginTop="37dp"
+            android:text="提交评价"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</ScrollView>

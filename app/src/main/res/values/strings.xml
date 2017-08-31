@@ -1,0 +1,173 @@
+<resources>
+    <string name="app_name">豆豆打车</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <string name="app_id">59100faa</string>
+
+    <!-- noHttp error -->
+    <string name="error_please_check_network">请检查网络。</string>
+    <string name="error_timeout">请求超时，网络不好或者服务器不稳定。</string>
+    <string name="error_not_found_server">未发现指定服务器，清切换网络后重试。</string>
+    <string name="error_url_error">URL错误。</string>
+    <string name="error_not_found_cache">没有找到缓存.</string>
+    <string name="error_system_unsupport_method">系统不支持的请求方法。</string>
+    <string name="error_parse_data_error">解析数据时发生错误。</string>
+    <string name="error_unknow">未知错误。</string>
+    <string name="error_response_code">服务器响应码%1$d</string>
+    <string name="error_response_code_dex">服务器响应码%1$d，如果你们服务器在这种情况下也返回数据你可以处理。</string>
+    <string name="log_out_tips">下线通知</string>
+    <string name="i_know">知道了</string>
+    <string name="cancel">取消</string>
+    <!-- 登录页相关文本 -->
+    <string name="login_hint_input_mobile">请输入手机号</string>
+    <string name="login_hint_input_password">请输入短信验证码</string>
+    <string name="login">登录</string>
+    <string name="login_register">新用户注册</string>
+    <string name="get_identifying_code">获取验证码</string>
+    <string name="user_agreement">点击登录,即表示您已同意《豆豆打车用户协议》</string>
+    <string name="real_name">真实姓名</string>
+    <string name="id_card_number">身份证号码</string>
+    <string name="submit">提交</string>
+    <string name="authentication_tips">1、填写真实信息,出行可获免费保障！ \n2、系统会对您提交的信息严格保密。 </string>
+    <string name="quick_login">快速登录</string>
+    <string name="real_name_authentication">实名认证</string>
+    <string name="skip">跳过</string>
+    <!--nav_menu-->
+    <string name="nav_record">行程记录</string>
+    <string name="nav_wallet">钱包</string>
+    <string name="nav_score">积分</string>
+    <string name="nav_coupon">优惠券</string>
+    <string name="nav_share">邀请有奖</string>
+    <string name="nav_share_sub">邀请一位新人各得50元优惠券</string>
+    <string name="nav_massage">系统消息</string>
+    <string name="nav_invoice">我的发票</string>
+    <string name="nav_service">客服</string>
+    <string name="nav_setting">设置</string>
+    <!--主页相关-->
+    <string name="confirm">确认</string>
+    <!--个人资料-->
+    <string name="profile">个人资料</string>
+    <string name="save">保存</string>
+    <string name="change_head_img">修改头像</string>
+    <string name="name">姓名</string>
+    <string name="sex">性别</string>
+    <string name="mobile">手机</string>
+    <string name="change_password">修改密码</string>
+    <string name="not_authentication">未认证</string>
+    <!--设置-->
+    <string name="sounds_tips">音效提示</string>
+    <string name="sounds_tips_content">打开后将以语音为你播报订单状态</string>
+    <string name="version_update">版本更新</string>
+    <string name="feedback">意见反馈</string>
+    <string name="agreement">用户协议</string>
+    <string name="about_lexing">关于豆豆</string>
+    <string name="free_password_pay">余额免密支付</string>
+    <string name="logout">安全退出</string>
+    <string name="feedback_tips">请输入您宝贵的意见或建议...</string>
+    <string name="submit_feedback">提交反馈</string>
+    <string name="wallet_free_password_pay">钱包余额免密支付</string>
+    <string name="free_pay">免密支付</string>
+    <!--修改密码-->
+    <string name="change_login_pwd">修改登录密码</string>
+    <string name="change_pay_pwd">修改支付密码</string>
+    <string name="set_pay_pwd">设置支付密码</string>
+    <string name="mobile_space">手 机 号:</string>
+    <string name="code_space">验 证 码:</string>
+    <string name="change_pwd_space">修改密码:</string>
+    <string name="set_pwd_space">设置密码:</string>
+    <string name="confirm_input">再次输入:</string>
+
+    <string name="input_password">请输入密码</string>
+    <string name="input_confirm_password">请再次输入</string>
+    <string name="confirm_change">确认修改</string>
+    <!--关于豆豆-->
+    <string name="lexing_wechat">微信公众号</string>
+    <string name="lexing_sina">新浪微博</string>
+    <string name="lexing_email">邮箱</string>
+    <string name="copyright">河北博创信息技术有限公司</string>
+    <string name="version_info">版本：V%s</string>
+    <!--充值-->
+    <string name="pay">充值</string>
+    <string name="bill">账单</string>
+    <string name="total_balance">总余额(元)</string>
+    <string name="pay_for_other">替他人充值</string>
+    <string name="input_manual">手动输入金额</string>
+    <string name="pay_tips" formatted="false">充%d赠送%d，充%d赠送%d，充%d赠送%d，多充多送，上不封顶。</string>
+    <string name="give_money">赠送：%d元</string>
+    <string name="pay_money">%d元</string>
+    <string name="wx_pay">微信支付</string>
+    <string name="ali_pay">支付宝支付</string>
+    <string name="cod_pay">货到付款</string>
+    <string name="confirm_pay">确认支付</string>
+    <string name="pay_agreement">点击确认充值，即表示你已同意《充值协议》</string>
+    <string name="input_pay_for_other">请输入对方手机号码</string>
+    <string name="pay_blessing_word">充值祝福语</string>
+    <string name="bill_details">账单明细</string>
+    <!--充值祝福语-->
+    <string name="bless_a">情人节快乐！</string>
+    <string name="bless_b">生日快乐！</string>
+    <string name="bless_c">爱你么么哒！</string>
+    <string name="bless_d">永远爱你呦！</string>
+    <!--发票-->
+    <string name="invoice">发票</string>
+    <string name="invoice_trip">按行程开票</string>
+    <string name="invoice_history">开票历史</string>
+    <string name="invoice_tips">按行程开票仅限用微信、支付宝支付车费的订单，钱包余 额支付的不支持开发票。</string>
+    <string name="ele_invoice_tips">开票金额不足200元，需支付邮费</string>
+    <string name="more_info_count">已填写%d项</string>
+    <!--积分-->
+    <string name="my_score">我的积分</string>
+    <string name="score_detail">积分明细</string>
+
+    <!--首页-->
+    <string name="call_car_immediately">立即叫车</string>
+    <string name="order">预约</string>
+    <string name="car_mall">豆豆车行</string>
+    <string name="car_finance">豆豆商城</string>
+    <string name="lexing">豆豆</string>
+
+    <string name="set_out_location">上车地点:</string>
+    <string name="destination">到达地点:</string>
+    <string name="estimated_cost">预计费用%d元</string>
+    <string name="input_home">请输入家地址</string>
+    <string name="input_company">请输入公司地址</string>
+    <string name="destination_hint">您要去哪</string>
+
+    <string name="wait_for_driving">等待接驾</string>
+    <string name="cancel_order">取消订单</string>
+    <string name="wait_for_driving_tips">司机将准时来接您，请您耐心等待。您若在司机接单 3分钟后取消，将需支付取消费用</string>
+    <string name="confirm_order">确认订单</string>
+    <string name="trip_done">行程结束</string>
+
+    <string name="order_money">%s元</string>
+    <string name="order_time">%s分钟</string>
+    <string name="order_distance">%s公里</string>
+    <string name="balance_pay">余额支付</string>
+    <string name="order_number">订单号：%s</string>
+
+    <string name="opinion_driver">评价司机</string>
+    <string name="cancel_reason">原因：%s</string>
+    <string name="estimate_time">,时间%d分钟</string>
+
+    <!--权限-->
+    <string name="album_dialog_permission_failed">权限获取失败</string>
+    <string name="album_permission_storage_failed_hint">获取读取相册权限失败，请在设置中授权后再使用。</string>
+    <string name="album_permission_camera_failed_hint">获取相机权限失败，请在设置中授权后再使用。</string>
+    <string name="album_dialog_sure">好的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="car_guide_price">厂商指导价:%s万</string>
+    <string name="car_reference_price">%s万起</string>
+
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unknown">发送返回</string>
+</resources>

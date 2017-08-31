@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lexing.passenger.ui.main.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+    <com.amap.api.maps.MapView
+        android:visibility="gone"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.amap.api.maps.MapView>
+
+    <ImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/padding_edge_common"
+        app:srcCompat="@drawable/location" />
+
+<RelativeLayout
+    android:id="@+id/layoutBottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+    <LinearLayout
+        android:id="@+id/layoutCallCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_gray_border_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+
+            <TextView
+                android:id="@+id/editSetOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:drawableLeft="@drawable/green_oval"
+                android:drawablePadding="5dp"
+                android:text="@string/set_out_location" />
+
+            <TextView
+                android:id="@+id/tvSetOut"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="60dp"
+                android:layout_toRightOf="@+id/editSetOut"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/destination_hint"
+                android:maxLines="1" />
+
+            <ImageView
+                android:id="@+id/setOUtVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_edge_common"
+                android:padding="5dp"
+                android:src="@drawable/ic_voice" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                android:id="@+id/tvDestination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:drawableLeft="@drawable/red_oval"
+                android:drawablePadding="5dp"
+                android:text="@string/destination" />
+
+            <TextView
+                android:id="@+id/editDestination"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="60dp"
+                android:layout_toRightOf="@+id/tvDestination"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/destination_hint"
+                android:maxLines="1" />
+
+            <ImageView
+                android:id="@+id/destinationVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_edge_common"
+                android:padding="5dp"
+                android:src="@drawable/ic_voice" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvEstimatedCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/estimated_cost"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_title" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnCallCarImmediately"
+                style="@style/Button.Primary"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="@dimen/padding_edge_common"
+                android:layout_marginRight="@dimen/padding_edge_common"
+                android:layout_marginTop="10dp"
+                android:text="@string/call_car_immediately"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutHomeBottom"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_gray_border_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/car_mall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/bottom_nav_car"
+            android:gravity="center_horizontal"
+            android:text="@string/car_mall" />
+
+        <TextView
+            android:id="@+id/car_finance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/bottom_nav_finance"
+            android:gravity="center_horizontal"
+            android:text="@string/car_finance" />
+
+        <TextView
+            android:id="@+id/pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/bottom_nav_pay"
+            android:gravity="center_horizontal"
+            android:text="@string/pay" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutHomeTop"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="127dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/transparent"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/call_car_immediately"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="26dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/call_car_immediately"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title" />
+
+        <ImageView
+            android:id="@+id/order"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_yuyue"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+        <CheckBox
+            android:id="@+id/checkboxMore"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/checkbox_more"
+            android:button="@null" />
+    </RelativeLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@color/transparent"
+        android:layout_margin="10dp"
+        android:layout_above="@+id/layoutHomeTop"
+        android:id="@+id/layoutMore"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@drawable/shape_gray_border_bg"
+            android:layout_width="124dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/PickUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_pick_up"
+                android:text="接机"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:textColor="#008bda"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_border_bg"
+            android:layout_width="124dp"
+            android:layout_height="38dp">
+            <TextView
+                android:id="@+id/SendOut"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_send_out"
+                android:text="送机"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:textColor="@color/colorPrimary"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_border_bg"
+            android:layout_width="124dp"
+            android:layout_height="38dp">
+            <TextView
+                android:id="@+id/replaceCall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_replace_call"
+                android:text="代叫"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:textColor="#fea202"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+</RelativeLayout>

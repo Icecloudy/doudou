@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_gray"
+    android:orientation="vertical">
+
+    <View style="@style/LineEdge" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/carModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_edge_common"
+            android:text="2016款  Sportback  35  TFSI  进取型"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/guidePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carModel"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:text="厂商指导价:18.49万"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_size_hint" />
+
+        <TextView
+            android:id="@+id/referencePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/carModel"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:text="18.49万起"
+            android:textColor="@color/text_red"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/referencePrice"
+            android:layout_toLeftOf="@+id/referencePrice"
+            android:text="参考价:"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_size_hint" />
+
+        <Button
+            android:id="@+id/callBusiness"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/shape_money_select_bg"
+            android:text="寻底价"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_title" />
+    </RelativeLayout>
+
+    <View style="@style/LineEdge" />
+</LinearLayout>

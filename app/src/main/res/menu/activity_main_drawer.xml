@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_record"
+            android:icon="@drawable/nav_record"
+            android:title="@string/nav_record" />
+        <item
+            android:id="@+id/nav_wallet"
+            android:icon="@drawable/nav_wallet"
+            android:title="@string/nav_wallet" />
+        <item
+            android:id="@+id/nav_score"
+            android:icon="@drawable/nav_score"
+            android:title="@string/nav_score" />
+        <item
+            android:id="@+id/nav_coupon"
+            android:icon="@drawable/nav_coupon"
+            android:title="@string/nav_coupon" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/nav_reward"
+            android:title="@string/nav_share"/>
+
+        <item
+            android:id="@+id/nav_massage"
+            android:icon="@drawable/nav_news"
+            android:title="@string/nav_massage" />
+        <item
+            android:id="@+id/nav_invoice"
+            android:icon="@drawable/nav_invoice"
+            android:title="@string/nav_invoice" />
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@drawable/nav_service"
+            android:title="@string/nav_service" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/nav_settings"
+            android:title="@string/nav_setting" />
+    </group>
+
+
+</menu>

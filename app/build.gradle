@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.doudou.passenger"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // JPush 相关配置
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "902a1a332904b5f40108e850", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+        // Enabling multidex support.
+        multiDexEnabled true
+
+    }
+    signingConfigs {
+        release {
+            storeFile file("../qmsw.key")
+            storePassword "qmsw3305"
+            keyAlias "wifi8"
+            keyPassword "qmsw3305"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    //gaode
+    compile 'com.amap.api:map3d-native:latest.integration'
+//    compile 'com.amap.api:map3d:latest.integration'
+    compile 'com.amap.api:search:latest.integration'
+//    compile 'com.amap.api:location:latest.integration'
+    //NoHttp
+    compile 'com.yolanda.nohttp:nohttp:1.1.0'
+    //fastJson
+    compile 'com.alibaba:fastjson:1.1.55.android'
+    // lottie 动画
+    compile 'com.airbnb.android:lottie:1.0.1'
+    //logger
+    compile 'com.orhanobut:logger:1.15'
+    // JPush
+    compile 'cn.jiguang.sdk:jpush:3.0.5'  // 此处以JPush 3.0.5 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.2'  // 此处以JCore 1.1.2 版本为例。
+    //下拉刷新上拉加载
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
+
+    compile 'com.zaaach:citypicker:1.1'
+    compile 'com.android.support:multidex:1.0.1'
+    //banner
+    compile 'com.youth.banner:banner:1.4.9'  //最新版本
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'com.contrarywind:Android-PickerView:3.2.5'
+
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.jaeger.statusbarutil:library:1.4.0'
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77111111">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_edge_common"
+        android:layout_marginRight="@dimen/padding_edge_common"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shape_gray_border_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <EditText
+                android:id="@+id/editAirNum"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_air_number"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890"
+                android:imeActionLabel="done"
+                android:hint="请输入航班号,比如MF8461"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_hint" />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/layoutFlightTime"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                android:id="@+id/flightTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_book_time"
+                android:drawablePadding="10dp"
+                android:hint="请选择当地起飞时间"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_size_hint" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

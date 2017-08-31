@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="false">
+        <shape>
+            <!-- 背景颜色 白色-->
+            <solid android:color="@color/transparent" />
+            <corners android:radius="5dp" />
+            <!-- 边框颜色 yellow-->
+            <stroke android:width="0.5dp" android:color="@color/colorAccent" />
+        </shape>
+    </item>
+        
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/white_press" />
+            <corners android:radius="5dp" />
+            <!-- 边框颜色 yellow-->
+            <stroke android:width="0.5dp" android:color="@color/colorAccent" />
+        </shape>
+    </item>
+
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/white_press" />
+            <corners android:radius="5dp" />
+            <!-- 边框颜色 yellow-->
+            <stroke android:width="0.5dp" android:color="@color/colorAccent" />
+        </shape>
+    </item>
+
+    <item android:state_checked="true">
+        <shape>
+            <solid android:color="@color/white_press" />
+            <corners android:radius="5dp" />
+            <!-- 边框颜色 yellow-->
+            <stroke android:width="0.5dp" android:color="@color/colorAccent" />
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#32aa50</color>
+    <color name="colorPrimaryDark">#32aa50</color>
+    <color name="colorAccent">#32aa50</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="style_color_primary">@color/colorPrimary</color>
+    <color name="style_color_primary_dark">@color/colorPrimaryDark</color>
+    <color name="style_color_primary_light">#efa442</color>
+
+
+    <color name="blue">#3DBDF9</color>
+    <color name="blue_pressed">#1eacef</color>
+    <color name="common_gray">#f5f5f5</color>
+
+    <color name="style_color_accent">@color/colorAccent</color>
+    <color name="style_color_accent_press">#1b9ad9</color>
+    <color name="style_color_accent_light">#40f4a620</color>
+
+    <color name="mantis">#6cb441</color>
+    <color name="mantis_press">#5eae2e</color>
+
+    <color name="gray_divider">#e1e1e1</color>
+    <color name="gray_edge">#dfdfdf</color>
+    <color name="gray_background">#f0f0f0</color>
+
+    <color name="gray_background_press">#f9f9f9</color>
+    <color name="white_press">#fff9f9f9</color>
+
+    <color name="bg_high_light">#fff1df</color>
+
+    <color name="text_toolbar">#ffffff</color>
+    <color name="text_title">#333</color>
+    <color name="text_content">#666</color>
+    <color name="text_hint">#999</color>
+
+    <color name="button_common">#f4a620</color>
+    <color name="button_common_press">#b47c1d</color>
+
+    <color name="button_warning">#f4a620</color>
+    <color name="button_warning_press">#b47c1d</color>
+
+    <!--add by franco start-->
+    <color name="gray_divide">#CCD1D2</color>
+    <color name="gray">#ececec</color>
+    <color name="colorOrange">#ff561b</color>
+    <color name="province_line_border">#C7C7C7</color>
+
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_timebtn_nor">#fca51d</color>
+    <color name="pickerview_timebtn_pre">#F5CD8F</color>
+    <color name="home_bg_yellow">#f89e3d</color>
+    <color name="circle_color">#a7d8b3</color>
+
+    <color name="cp_gray">#8c8c8c</color>
+    <color name="cp_gray_deep">#5c5c5c</color>
+    <color name="text_red">#ff4045</color>
+    <!--add by franco end-->
+</resources>

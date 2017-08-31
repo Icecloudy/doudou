@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景颜色 灰色-->
+    <solid android:color="@color/white" />
+    <!-- 描边 -->
+    <stroke
+        android:width="1dip"    
+        android:color="@color/colorPrimary" />
+
+</shape>
+<!--shape_money_unselect_bg-->

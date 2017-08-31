@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layoutMain"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/sheetTextText1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item"
+        android:gravity="center"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_size_title"/>
+
+    <View style="@style/LineEdge"/>
+
+    <TextView
+        android:id="@+id/sheetTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item"
+        android:gravity="center"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_size_title"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#c0c0c0"/>
+
+    <TextView
+        android:id="@+id/sheetTextTextCancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/text_size_title"/>
+</LinearLayout>

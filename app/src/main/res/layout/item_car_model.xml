@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_gray"
+    android:orientation="vertical">
+
+    <View style="@style/LineEdge" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/carIcon"
+            android:layout_width="96dp"
+            android:layout_height="76.8dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_car_model" />
+
+        <View
+            android:id="@+id/centerView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:background="@color/transparent" />
+
+        <TextView
+            android:id="@+id/carName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/centerView"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/carIcon"
+            android:text="奥迪"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_toolbar" />
+
+        <TextView
+            android:id="@+id/carPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/centerView"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/carIcon"
+            android:text="41.88-74.60万"
+            android:textColor="@color/text_red"
+            android:textSize="@dimen/text_size_title" />
+    </RelativeLayout>
+
+    <View style="@style/LineEdge" />
+</LinearLayout>

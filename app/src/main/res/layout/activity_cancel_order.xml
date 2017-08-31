@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lexing.passenger.ui.main.CancelOrderActivity">
+
+
+    <LinearLayout
+        android:id="@+id/activity_cancel_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_gray"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextView.Left"
+            android:layout_height="37dp"
+            android:background="@color/common_gray"
+            android:gravity="center_vertical"
+            android:text="请选择您要取消的原因" />
+
+        <View style="@style/LineDivide" />
+
+
+        <RadioGroup
+            android:id="@+id/cancelReasonGR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <RadioButton
+                android:id="@+id/slow"
+                style="@style/TextView.Left"
+                android:background="@drawable/checkbox_cancel_order"
+                android:button="@null"
+                android:paddingLeft="35dp"
+                android:text="司机到位太慢，等不及了。" />
+
+
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+
+            <RadioButton
+                android:id="@+id/traffic"
+                style="@style/TextView.Left"
+                android:background="@drawable/checkbox_cancel_order"
+                android:button="@null"
+                android:paddingLeft="35dp"
+                android:text="路线拥堵，司机赶不到了。" />
+
+
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+
+            <RadioButton
+                android:id="@+id/timeOut"
+                style="@style/TextView.Left"
+                android:background="@drawable/checkbox_cancel_order"
+                android:button="@null"
+                android:paddingLeft="35dp"
+                android:text="时间来不及，不想用车了。" />
+
+
+            <View
+                style="@style/LineEdge"
+                android:layout_marginLeft="@dimen/padding_edge_common" />
+
+            <RadioButton
+                android:id="@+id/doNotWanna"
+                style="@style/TextView.Left"
+                android:background="@drawable/checkbox_cancel_order"
+                android:button="@null"
+                android:paddingLeft="35dp"
+                android:text="暂时不需要打车了。" />
+
+            <View style="@style/LineEdge" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/TextView.Left"
+            android:layout_height="37dp"
+            android:background="@color/common_gray"
+            android:gravity="center_vertical"
+            android:text="其他原因" />
+
+        <View style="@style/LineDivide" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editFeedbackContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="15dp"
+                android:background="@null"
+                android:hint="请输入其他原因..." />
+        </LinearLayout>
+
+        <View style="@style/LineDivide" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/submit"
+            style="@style/Button.Primary"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:layout_marginTop="38dp"
+            android:text="立即提交"
+            android:textColor="@color/white"
+            android:layout_marginBottom="28dp"/>
+    </LinearLayout>
+</ScrollView>

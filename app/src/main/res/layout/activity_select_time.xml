@@ -1,0 +1,90 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pickerview_topbar_height"
+            android:background="@color/pickerview_bg_topbar">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="@dimen/pickerview_topbar_paddingleft"
+                android:paddingRight="@dimen/pickerview_topbar_paddingright"
+                android:text="@string/cancel"
+                />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btnSubmit"
+                android:layout_toRightOf="@+id/btnCancel"
+                android:gravity="center"
+                android:text="用车时间为当地时间"/>
+
+            <Button
+                android:id="@id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="@dimen/pickerview_topbar_paddingright"
+                android:paddingRight="@dimen/pickerview_topbar_paddingleft"
+                android:text="@string/confirm"
+                android:textColor="@color/colorPrimary"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal">
+
+            <com.lexing.passenger.views.wheelView.WheelView
+                android:id="@+id/wheelViewDay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                >
+            </com.lexing.passenger.views.wheelView.WheelView>
+
+            <com.lexing.passenger.views.wheelView.WheelView
+                android:id="@+id/wheelViewHour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+            </com.lexing.passenger.views.wheelView.WheelView>
+
+            <com.lexing.passenger.views.wheelView.WheelView
+                android:id="@+id/wheelViewMin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+            </com.lexing.passenger.views.wheelView.WheelView>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

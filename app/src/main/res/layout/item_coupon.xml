@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_coupon"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:layout_marginTop="@dimen/padding_edge_common"
+    android:layout_marginLeft="@dimen/padding_edge_common"
+    android:layout_marginRight="@dimen/padding_edge_common"
+    tools:context="com.lexing.passenger.ui.profile.coupon.CouponActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:background="@drawable/shape_coupon_bg">
+
+        <TextView
+            android:id="@+id/couponName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/padding_edge_common"
+            android:text="优惠券"
+            android:textColor="@color/white"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/couponMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="25dp"
+            android:text="30"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/moneyTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/couponMoney"
+            android:layout_toLeftOf="@+id/couponMoney"
+            android:paddingTop="5dp"
+            android:text="￥"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/couponDeadline"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/coupon_bottom_bg"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/padding_edge_common"
+        android:text="有效期：04月05日至06:05日" />
+</RelativeLayout>

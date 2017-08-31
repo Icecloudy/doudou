@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_gray"
+    android:orientation="vertical"
+    tools:context="com.lexing.passenger.ui.profile.settings.SettingsActivity">
+
+    <View
+        style="@style/LineDivide"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/centerView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:background="@color/white" />
+
+        <Switch
+            android:id="@+id/switchSounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/centerView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/sounds_tips"
+            android:textColor="@color/text_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/centerView"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/sounds_tips_content"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_size_hint" />
+    </RelativeLayout>
+
+    <View
+        style="@style/LineDivide"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--版本更新-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                android:id="@+id/tvVersionUpdate"
+                style="@style/TextView.Clickable"
+                android:text="@string/version_update" />
+
+            <TextView
+                android:id="@+id/tvIsNewVersion"
+                style="@style/TextView.Right"
+                android:layout_marginRight="30dp"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--意见反馈-->
+        <TextView
+            android:id="@+id/tvFeedback"
+            style="@style/TextView.Clickable"
+            android:text="@string/feedback" />
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--用户协议-->
+        <TextView
+            android:id="@+id/tvAgreement"
+            style="@style/TextView.Clickable"
+            android:text="@string/agreement" />
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--关于豆豆-->
+        <TextView
+            android:id="@+id/tvAbout"
+            style="@style/TextView.Clickable"
+            android:text="@string/about_lexing" />
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--关于豆豆-->
+        <TextView
+            android:id="@+id/tvFreePwdPay"
+            style="@style/TextView.Clickable"
+            android:text="@string/free_password_pay" />
+
+        <View style="@style/LineEdge" />
+    </LinearLayout>
+
+    <View
+        style="@style/LineEdge"
+        android:layout_marginTop="10dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/mine_logout"
+        style="@style/TextView.Button.White"
+        android:text="@string/logout" />
+
+    <View style="@style/LineEdge" />
+</LinearLayout>

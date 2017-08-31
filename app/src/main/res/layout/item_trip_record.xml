@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutTrip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_gray"
+    android:orientation="vertical">
+
+    <View
+        style="@style/LineEdge"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item">
+
+        <TextView
+            android:id="@+id/orderDate"
+            style="@style/TextView.Clickable"
+            android:drawableLeft="@drawable/ic_history"
+            android:drawablePadding="10dp"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/tvIsDone"
+            style="@style/TextView.Right"
+            android:paddingRight="@dimen/padding_edge_common" />
+    </RelativeLayout>
+
+    <View
+        style="@style/LineEdge"
+        android:layout_marginLeft="@dimen/padding_edge_common" />
+
+    <TextView
+        android:id="@+id/setOutLocation"
+        style="@style/TextView.Left"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/green_oval"
+        android:drawablePadding="10dp"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_size_title" />
+
+    <TextView
+        android:id="@+id/EsLocation"
+        style="@style/TextView.Left"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/red_oval"
+        android:drawablePadding="10dp"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_size_title" />
+
+    <View style="@style/LineEdge" />
+</LinearLayout>

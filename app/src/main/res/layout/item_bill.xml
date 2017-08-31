@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+
+        <View
+            android:id="@+id/centerView"
+            android:layout_width="100dp"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:background="@color/transparent" />
+
+        <TextView
+            android:id="@+id/tvPayType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/centerView"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:text="余额充值"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/tvPayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/centerView"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:text="2017-4-13 18:04:57"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_size_hint" />
+
+        <TextView
+            android:id="@+id/plusMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:text="+100.00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/reduceMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding_edge_common"
+            android:text="-100.00"
+            android:textSize="@dimen/text_size_title"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View style="@style/LineEdge" />
+</LinearLayout>

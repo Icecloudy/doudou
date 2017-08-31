@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_order_cancel_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.lexing.passenger.ui.main.OrderCancelDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <com.lexing.passenger.views.RoundAngleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/padding_edge_common"
+            android:src="@drawable/ic_head"
+            app:roundWidth="33dp"
+            app:roundHeight="33dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+                <TextView
+                    android:id="@+id/diverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="张师傅"
+                    android:textColor="@color/text_title"
+                    android:textSize="@dimen/text_size_title" />
+
+                <TextView
+                    android:text="商务车"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="10sp"
+                    android:background="@drawable/shape_car_type_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/diverName"
+                    android:id="@+id/tvDriverType"/>
+
+                <TextView
+                    android:id="@+id/rating_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvDriverType"
+                    android:drawableLeft="@drawable/rating_small_star"
+                    android:drawablePadding="3dp"
+                    android:text="4.9" />
+
+                <TextView
+                    android:id="@+id/tvBillCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/rating_star"
+                    android:text="200单" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/carNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#e6e6e6"
+                    android:padding="5dp"
+                    android:text="粤B4A72R" />
+
+                <TextView
+                    android:id="@+id/carType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/carNum"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:text="白色•野马T80" />
+
+                <ImageView
+                    android:id="@+id/imgCallDiver"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/padding_edge_common"
+                    android:src="@drawable/ic_call_diver" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imgCallDiverVoice"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/imgCallDiver"
+                    android:src="@drawable/ic_call_diver_voice" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item">
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:background="#cccccc" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:text="行程取消"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_marginTop="30dp"
+            android:text="已取消订单"
+            android:textColor="@color/text_title"
+            android:layout_centerHorizontal="true"
+            android:drawableTop="@drawable/icon_cancel"
+            android:drawablePadding="30dp"/>
+        <TextView
+            android:id="@+id/tvCancelReason"
+            android:layout_below="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/cancel_reason"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_extra_info_invoice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_gray"
+    android:orientation="vertical"
+    tools:context="com.lexing.passenger.ui.profile.invoice.ExtraInfoInvoiceActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_common_clickable_item">
+
+        <TextView
+            style="@style/TextView.Left"
+            android:text="备注说明" />
+
+        <EditText
+            android:id="@+id/editExtra"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="110dp"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="填写备注说明"
+            android:maxLines="1"
+            android:textColor="@color/text_title" />
+    </RelativeLayout>
+    <View style="@style/LineEdge" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--姓名-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="纳税人识别号" />
+
+            <EditText
+                android:id="@+id/editCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="110dp"
+                android:background="@null"
+                android:hint="请填写纳税人识别号"
+                android:maxLines="1"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--性别-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="地址、电话" />
+
+            <EditText
+                android:id="@+id/editAddressMobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="110dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="填写注册地址、注册电话"
+                android:maxLines="1"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineEdge"
+            android:layout_marginLeft="@dimen/padding_edge_common" />
+        <!--手机-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_common_clickable_item">
+
+            <TextView
+                style="@style/TextView.Left"
+                android:text="开户行及账号" />
+
+            <EditText
+
+                android:id="@+id/editBankCount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="110dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="填写开户行及银行账号"
+                android:maxLines="1"
+                android:textColor="@color/text_title" />
+        </RelativeLayout>
+
+
+        <View style="@style/LineEdge" />
+
+    </LinearLayout>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/confirm"
+        style="@style/Button.Primary"
+        android:layout_marginLeft="@dimen/padding_edge_common"
+        android:layout_marginRight="@dimen/padding_edge_common"
+        android:layout_marginTop="42dp"
+        android:text="@string/confirm"
+        android:textColor="@color/white" />
+</LinearLayout>
