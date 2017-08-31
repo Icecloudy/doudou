@@ -23,7 +23,7 @@
 
 
 
-            <com.lexing.passenger.views.RoundAngleImageView
+            <com.doudou.passenger.views.RoundAngleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/imgHead"
                 android:layout_width="66dp"

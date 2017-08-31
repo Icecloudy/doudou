@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/common_gray"
-    tools:context="com.lexing.passenger.ui.profile.record.TripRecordActivity">
+    tools:context="com.doudou.passenger.ui.profile.record.TripRecordActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_common_clickable_item"

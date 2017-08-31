@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:overScrollMode="never"
     android:scrollbars="none"
-    tools:context="com.lexing.passenger.ui.main.OpinionDriverActivity">
+    tools:context="com.doudou.passenger.ui.main.OpinionDriverActivity">
 
     <LinearLayout
         android:id="@+id/activity_opinion_driver"
@@ -37,7 +37,7 @@
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
-            <com.lexing.passenger.views.RoundAngleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <com.doudou.passenger.views.RoundAngleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
                 android:layout_width="66dp"
                 android:layout_height="66dp"

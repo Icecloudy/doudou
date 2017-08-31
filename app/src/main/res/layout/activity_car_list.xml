@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lexing.passenger.ui.main.car.CarListActivity">
+    tools:context="com.doudou.passenger.ui.main.car.CarListActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,7 +29,7 @@
             android:textColor="@color/white"
             android:visibility="gone"/>
 
-        <com.lexing.passenger.views.CarSlideBar
+        <com.doudou.passenger.views.CarSlideBar
             android:layout_alignTop="@+id/listview_all_city"
             android:id="@+id/side_letter_bar"
             android:layout_width="@dimen/side_letter_bar_width"

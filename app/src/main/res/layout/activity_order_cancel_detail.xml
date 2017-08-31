@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context="com.lexing.passenger.ui.main.OrderCancelDetailActivity">
+    tools:context="com.doudou.passenger.ui.main.OrderCancelDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:orientation="horizontal">
 
 
-        <com.lexing.passenger.views.RoundAngleImageView
+        <com.doudou.passenger.views.RoundAngleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
             android:layout_width="66dp"

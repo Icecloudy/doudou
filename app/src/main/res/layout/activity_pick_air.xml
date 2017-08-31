@@ -6,7 +6,7 @@
     android:background="@color/common_gray"
     android:overScrollMode="never"
     android:scrollbars="none"
-    tools:context="com.lexing.passenger.ui.main.replace.ReplaceActivity">
+    tools:context="com.doudou.passenger.ui.main.replace.ReplaceActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

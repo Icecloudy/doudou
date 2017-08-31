@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lexing.passenger.ui.main.car.CarMallActivity">
+    tools:context="com.doudou.passenger.ui.main.car.CarMallActivity">
     <ProgressBar
         android:id="@+id/progressBar1"
         style="?android:attr/progressBarStyleHorizontal"

@@ -5,7 +5,7 @@
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lexing.passenger.ui.main.MainActivity"
+    tools:context="com.doudou.passenger.ui.main.MainActivity"
     tools:showIn="@layout/app_bar_main">
     <com.amap.api.maps.MapView
         android:visibility="gone"

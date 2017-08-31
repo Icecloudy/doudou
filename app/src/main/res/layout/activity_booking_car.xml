@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/common_gray"
     android:orientation="vertical"
-    tools:context="com.lexing.passenger.ui.main.booking.BookingCarActivity">
+    tools:context="com.doudou.passenger.ui.main.booking.BookingCarActivity">
 
     <RelativeLayout
         android:id="@+id/layoutTab"

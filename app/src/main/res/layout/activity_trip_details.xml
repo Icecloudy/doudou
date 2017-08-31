@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/common_gray"
-    tools:context="com.lexing.passenger.ui.profile.record.TripDetailsActivity">
+    tools:context="com.doudou.passenger.ui.profile.record.TripDetailsActivity">
 
     <com.amap.api.maps.MapView
         android:id="@+id/map"
@@ -28,7 +28,7 @@
             android:layout_alignParentBottom="true"
             android:orientation="horizontal">
 
-            <com.lexing.passenger.views.RoundAngleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <com.doudou.passenger.views.RoundAngleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
                 android:layout_width="66dp"
                 android:layout_height="66dp"

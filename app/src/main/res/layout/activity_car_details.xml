@@ -4,7 +4,7 @@
     android:id="@+id/activity_car_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lexing.passenger.ui.main.car.CarDetailsActivity">
+    tools:context="com.doudou.passenger.ui.main.car.CarDetailsActivity">
 
     <ListView
         android:id="@+id/carDetailsListView"

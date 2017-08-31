@@ -21,7 +21,7 @@
         android:textColor="@color/text_title"
         android:textSize="@dimen/text_size_title" />
 
-    <com.lexing.passenger.views.WrapHeightGridView
+    <com.doudou.passenger.views.WrapHeightGridView
         android:id="@+id/gridview_hot_car"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

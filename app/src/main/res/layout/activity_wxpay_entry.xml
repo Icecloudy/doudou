@@ -4,7 +4,7 @@
     android:id="@+id/activity_wxpay_entry"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lexing.passenger.wxapi.WXPayEntryActivity">
+    tools:context="com.doudou.passenger.wxapi.WXPayEntryActivity">
     <TextView
         android:visibility="gone"
         android:id="@+id/pay_success"

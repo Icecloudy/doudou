@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="com.lexing.passenger.ui.profile.profile.ProfileActivity">
+    tools:context="com.doudou.passenger.ui.profile.profile.ProfileActivity">
 
     <View
         style="@style/LineDivide"
@@ -27,7 +27,7 @@
             android:background="@drawable/bg_white_clickable">
 
 
-            <com.lexing.passenger.views.RoundAngleImageView
+            <com.doudou.passenger.views.RoundAngleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
                 android:layout_width="30dp"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/common_gray"
     android:orientation="vertical"
-    tools:context="com.lexing.passenger.ui.profile.settings.SettingsActivity">
+    tools:context="com.doudou.passenger.ui.profile.settings.SettingsActivity">
 
     <View
         style="@style/LineDivide"

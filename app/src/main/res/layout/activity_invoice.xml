@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/common_gray"
-    tools:context="com.lexing.passenger.ui.profile.invoice.InvoiceActivity">
+    tools:context="com.doudou.passenger.ui.profile.invoice.InvoiceActivity">
     <View
         style="@style/LineDivide"
         android:layout_marginTop="10dp" />

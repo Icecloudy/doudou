@@ -7,7 +7,7 @@
     android:layout_marginTop="@dimen/padding_edge_common"
     android:layout_marginLeft="@dimen/padding_edge_common"
     android:layout_marginRight="@dimen/padding_edge_common"
-    tools:context="com.lexing.passenger.ui.profile.coupon.CouponActivity">
+    tools:context="com.doudou.passenger.ui.profile.coupon.CouponActivity">
 
     <RelativeLayout
         android:id="@+id/layoutCoupon"

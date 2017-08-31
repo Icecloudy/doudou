@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/common_gray"
     android:orientation="vertical"
-    tools:context="com.lexing.passenger.ui.profile.settings.FeedbackActivity">
+    tools:context="com.doudou.passenger.ui.profile.settings.FeedbackActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

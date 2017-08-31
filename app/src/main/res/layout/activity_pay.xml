@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/common_gray"
     android:orientation="vertical"
-    tools:context="com.lexing.passenger.ui.profile.wallet.PayActivity">
+    tools:context="com.doudou.passenger.ui.profile.wallet.PayActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbarlayout"
