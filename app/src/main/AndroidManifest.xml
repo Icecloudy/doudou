@@ -43,7 +43,7 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
-        android:name="com.doudou.passenger.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/app_logo"
@@ -72,33 +72,33 @@
 
         <service android:name="com.amap.api.location.APSService" />
         <activity
-            android:name="com.doudou.passenger.ui.main.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.doudou.passenger.ui.login.LoginActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.profile.AuthenticationActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.profile.ProfileActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.settings.SettingsActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.settings.FeedbackActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.settings.FreePwdPayActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.profile.ChangePasswordActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.profile.SetPasswordActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.settings.AboutLexingActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.settings.UserAgreementActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.wallet.PayActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.wallet.PayForOtherActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.invoice.InvoiceActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.wallet.PayHistoryActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.score.MyScoreActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.DestinationActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.NavigationActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.CancelOrderActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.ConfirmOrderActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.OpinionDriverActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.OrderCancelDetailActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.SetCommonLocationActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.message.NewsActivity" />
-        <activity android:name="com.doudou.passenger.splash.SplashActivity">
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.profile.profile.AuthenticationActivity" />
+        <activity android:name=".ui.profile.profile.ProfileActivity" />
+        <activity android:name=".ui.profile.settings.SettingsActivity" />
+        <activity android:name=".ui.profile.settings.FeedbackActivity" />
+        <activity android:name=".ui.profile.settings.FreePwdPayActivity" />
+        <activity android:name=".ui.profile.profile.ChangePasswordActivity" />
+        <activity android:name=".ui.profile.profile.SetPasswordActivity" />
+        <activity android:name=".ui.profile.settings.AboutLexingActivity" />
+        <activity android:name=".ui.profile.settings.UserAgreementActivity" />
+        <activity android:name=".ui.profile.wallet.PayActivity" />
+        <activity android:name=".ui.profile.wallet.PayForOtherActivity" />
+        <activity android:name=".ui.profile.invoice.InvoiceActivity" />
+        <activity android:name=".ui.profile.wallet.PayHistoryActivity" />
+        <activity android:name=".ui.profile.score.MyScoreActivity" />
+        <activity android:name=".ui.main.DestinationActivity" />
+        <activity android:name=".ui.main.NavigationActivity" />
+        <activity android:name=".ui.main.CancelOrderActivity" />
+        <activity android:name=".ui.main.ConfirmOrderActivity" />
+        <activity android:name=".ui.main.OpinionDriverActivity" />
+        <activity android:name=".ui.main.OrderCancelDetailActivity" />
+        <activity android:name=".ui.main.SetCommonLocationActivity" />
+        <activity android:name=".ui.profile.message.NewsActivity" />
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -107,7 +107,7 @@
         </activity>
 
         <receiver
-            android:name="com.doudou.passenger.receiver.MyReceiver"
+            android:name=".receiver.MyReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -121,56 +121,56 @@
         </receiver>
 
         <activity
-            android:name="com.doudou.passenger.ui.main.CityPickerActivity"
+            android:name=".ui.main.CityPickerActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name="com.doudou.passenger.ui.profile.record.TripRecordActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.record.TripDetailsActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.booking.BookingCarActivity" />
+        <activity android:name=".ui.profile.record.TripRecordActivity" />
+        <activity android:name=".ui.profile.record.TripDetailsActivity" />
+        <activity android:name=".ui.main.booking.BookingCarActivity" />
         <activity
-            android:name="com.doudou.passenger.ui.main.booking.SelectTimeActivity"
+            android:name=".ui.main.booking.SelectTimeActivity"
             android:theme="@style/MyDialogStyleBottom" />
-        <activity android:name="com.doudou.passenger.ui.main.booking.BusinessCarActivity" />
+        <activity android:name=".ui.main.booking.BusinessCarActivity" />
         <activity
-            android:name="com.doudou.passenger.ui.main.booking.OrderCallingActivity"
+            android:name=".ui.main.booking.OrderCallingActivity"
             android:theme="@style/AlertDialogStyle" />
-        <activity android:name="com.doudou.passenger.ui.main.car.CarMallActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.replace.ReplaceActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.coupon.CouponActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.car.CarListActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.car.CarModelActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.car.CarDetailsActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.invoice.EleInvoiceActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.invoice.ExtraInfoInvoiceActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.invoice.InvoiceRecordActivity" />
-        <activity android:name="com.doudou.passenger.ui.profile.invoice.InvoiceHistoryActivity" />
-        <activity android:name="com.doudou.passenger.ui.main.airport.PickAirActivity" />
+        <activity android:name=".ui.main.car.CarMallActivity" />
+        <activity android:name=".ui.main.replace.ReplaceActivity" />
+        <activity android:name=".ui.profile.coupon.CouponActivity" />
+        <activity android:name=".ui.main.car.CarListActivity" />
+        <activity android:name=".ui.main.car.CarModelActivity" />
+        <activity android:name=".ui.main.car.CarDetailsActivity" />
+        <activity android:name=".ui.profile.invoice.EleInvoiceActivity" />
+        <activity android:name=".ui.profile.invoice.ExtraInfoInvoiceActivity" />
+        <activity android:name=".ui.profile.invoice.InvoiceRecordActivity" />
+        <activity android:name=".ui.profile.invoice.InvoiceHistoryActivity" />
+        <activity android:name=".ui.main.airport.PickAirActivity" />
         <activity
-            android:name="com.doudou.passenger.ui.main.airport.FlightActivity"
+            android:name=".ui.main.airport.FlightActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
         <service
-            android:name="com.doudou.passenger.service.OrderService"
+            android:name=".service.OrderService"
             android:enabled="true"
             android:exported="true" />
 
         <!-- wxpay start -->
         <activity
-            android:name="com.doudou.passenger.wxapi.WXPayEntryActivity"
+            android:name=".wxapi.WXPayEntryActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <!-- wxpay end -->
         <activity
-            android:name="com.doudou.passenger.wxapi.WXEntryActivity"
+            android:name=".wxapi.WXEntryActivity"
             android:exported="true" />
 
-        <receiver android:name="com.doudou.passenger.receiver.AppRegister">
+        <receiver android:name=".receiver.AppRegister">
             <intent-filter>
                 <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.doudou.passenger.ui.profile.share.ShareActivity" />
+        <activity android:name=".ui.profile.share.ShareActivity" />
     </application>
 
 </manifest>
