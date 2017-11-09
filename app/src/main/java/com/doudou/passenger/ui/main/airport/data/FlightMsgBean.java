@@ -7,6 +7,7 @@ import java.util.List;
  */
 
 public class FlightMsgBean {
+
     private FlightInfoBean info;
     private List<FlightList> list;
 

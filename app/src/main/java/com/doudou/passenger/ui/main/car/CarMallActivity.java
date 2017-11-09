@@ -46,8 +46,8 @@ public class CarMallActivity extends BaseActivity {
         setTitle("豆豆商城");
         userDataPreference = new UserDataPreference(this);
         requestQueue = NoHttp.newRequestQueue();
-        getPwd();
-
+        initWidget();
+        //getPwd();
     }
 
     private void initWidget() {

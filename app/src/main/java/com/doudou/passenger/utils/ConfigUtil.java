@@ -3,9 +3,9 @@ package com.doudou.passenger.utils;
 public class ConfigUtil {
 
     //聚合数据航班接口
-    public static final String APP_KEY = "f1f9798ad08751da8cc914e302b9b250";
+    public static final String APP_KEY = "2c34d50659514d5fccb322ec68fba524";
     //
-    public static final String GET_FLIGHT_MSG = "http://apis.juhe.cn/plan/snew";
+    public static final String GET_FLIGHT_MSG = "http://op.juhe.cn/flight/ff";    //"http://apis.juhe.cn/plan/snew";
     //------------------------推送标识  start
     /**
      * payload(string):'neworder' 新订单，用户下单后推送                         司机端

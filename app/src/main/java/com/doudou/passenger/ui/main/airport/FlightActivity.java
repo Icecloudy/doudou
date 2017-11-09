@@ -26,6 +26,8 @@ import com.doudou.passenger.nohttp.BaseRequest;
 import com.doudou.passenger.nohttp.LoadingDialog;
 import com.doudou.passenger.ui.main.airport.data.FlightList;
 import com.doudou.passenger.ui.main.airport.data.FlightMsgBean;
+import com.doudou.passenger.ui.main.airport.data.NewFlightMsgBean;
+import com.doudou.passenger.ui.main.airport.data.VIACity;
 import com.doudou.passenger.ui.main.airport.data.flightTimeBean;
 import com.doudou.passenger.utils.ConfigUtil;
 import com.doudou.passenger.utils.StringUtil;
@@ -62,7 +64,7 @@ public class FlightActivity extends Activity {
     private ArrayList<flightTimeBean> options1Items = new ArrayList<>();
     private String time;
 
-    private ArrayList<FlightList> optionsAddItems = new ArrayList<>();
+    private ArrayList<VIACity> optionsAddItems = new ArrayList<VIACity>();
 
     private RequestQueue requestQueue;
     private LoadingDialog loadingDialog;
@@ -204,8 +206,8 @@ public class FlightActivity extends Activity {
     private void getFlightMsg(String name, String date) {
         BaseRequest baseRequest = new BaseRequest(ConfigUtil.GET_FLIGHT_MSG, RequestMethod.POST)
                 .add("key", ConfigUtil.APP_KEY)
-                .add("name", name)
-                .add("date", date);
+                .add("flightNo", name)
+                .add("flightDate", date);
         requestQueue.add(0, baseRequest, new OnResponseListener<String>() {
             @Override
             public void onStart(int what) {
@@ -239,12 +241,12 @@ public class FlightActivity extends Activity {
         if (jsonObject.containsKey("result")) {
             String result = jsonObject.getString("result");
             if (!TextUtils.isEmpty(result)) {
-                FlightMsgBean msgBean = JSON.parseObject(result, FlightMsgBean.class);
-                if (msgBean.getList() != null && msgBean.getList().size() > 0) {
-                    if (msgBean.getList().size() == 1) {
+                NewFlightMsgBean msgBean = JSON.parseObject(result, NewFlightMsgBean.class);
+                if (msgBean.getVIACities() != null && msgBean.getVIACities().getVIACity().size() > 0) {
+                    if (msgBean.getVIACities().getVIACity().size() == 2) {
                         //setResult
                         Intent intent = new Intent();
-                        intent.putExtra("flightMsg", JSON.toJSONString(msgBean.getList().get(0)));
+                        intent.putExtra("flightMsg", JSON.toJSONString(msgBean.getVIACities().getVIACity().get(1)));
                         intent.putExtra("flightNum", editAirNum.getText().toString());
                         setResult(RESULT_OK, intent);
                         finish();
@@ -258,12 +260,12 @@ public class FlightActivity extends Activity {
         }
     }
 
-    private void ShowFlightPickerView(FlightMsgBean msgBean) {// 弹出选择器
+    private void ShowFlightPickerView(NewFlightMsgBean msgBean) {// 弹出选择器
         if (optionsAddItems != null) {
             optionsAddItems.clear();
         }
-        for (int i = 0; i < msgBean.getList().size(); i++) {
-            optionsAddItems.add(msgBean.getList().get(i));
+        for (int i = 0; i < msgBean.getVIACities().getVIACity().size(); i++) {
+            optionsAddItems.add(msgBean.getVIACities().getVIACity().get(i));
         }
         OptionsPickerView addOptions = new OptionsPickerView.Builder(this, new OptionsPickerView.OnOptionsSelectListener() {
             @Override

@@ -704,7 +704,9 @@ public class MainActivity extends AppCompatActivity
                 intent = new Intent(MainActivity.this, SettingsActivity.class);
                 break;
             case R.id.PickUp:
-                intent = new Intent(MainActivity.this, PickAirActivity.class);
+                //intent = new Intent(MainActivity.this, PickAirActivity.class);
+                intent = new Intent(MainActivity.this, BookingCarActivity.class);
+                intent.putExtra("title", "接机");
                 break;
             case R.id.SendOut:
                 intent = new Intent(MainActivity.this, BookingCarActivity.class);

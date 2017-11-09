@@ -444,7 +444,7 @@ public class StringUtil {
       * @return
      * @throws Exception */
     public static String getSpecifiedDayBefore(String specifiedDay,int delayed){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-ddTHH:mm:ss");
         Calendar c = Calendar.getInstance();
         Date date=null;
         try {

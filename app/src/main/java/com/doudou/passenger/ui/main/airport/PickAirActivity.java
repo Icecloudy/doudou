@@ -29,6 +29,7 @@ import com.doudou.passenger.nohttp.HttpListener;
 import com.doudou.passenger.ui.BaseActivity;
 import com.doudou.passenger.ui.main.DestinationActivity;
 import com.doudou.passenger.ui.main.airport.data.FlightList;
+import com.doudou.passenger.ui.main.airport.data.VIACity;
 import com.doudou.passenger.ui.main.airport.data.flightTimeBean;
 import com.doudou.passenger.ui.main.booking.OrderCallingActivity;
 import com.doudou.passenger.ui.main.task.LocationTask;
@@ -198,15 +199,13 @@ public class PickAirActivity extends BaseActivity implements RouteTask.OnRouteCa
                     tvAirNum.setText(flightNum);
                     Logger.d("flightMsg:" + flightMsg);
                     try {
-                        FlightList flightLists = JSON.parseObject(flightMsg, FlightList.class);
-                        if (TextUtils.isEmpty(flightLists.getSjddtime_full())) {
-                            flightTime = flightLists.getJhddtime_full();
-                        } else {
-                            flightTime = flightLists.getSjddtime_full();
+                        VIACity viaCity = JSON.parseObject(flightMsg, VIACity.class);
+                        if (!TextUtils.isEmpty(viaCity.getToTime())) {
+                            flightTime = viaCity.getToTime();
                         }
-                        String msg = flightLists.getDd() + "(" + flightTime.substring(5, flightTime.length()) + "到达)";
+                        String msg = viaCity.getCity() + "(" + flightTime.substring(11, flightTime.length()) + "到达)";
                         editSetOut.setText(msg);
-                        getLatlon(flightLists.getDd(), flightLists.getDd_city());
+                        //getLatlon(flightLists.getDd(), viaCity.getCity());
                         addForeColorSpan("航班到达后20分钟");
                         time = StringUtil.getSpecifiedDayBefore(flightTime, 20);
                         setBtnBg();

@@ -85,9 +85,10 @@ public class BookingCarActivity extends BaseActivity implements RouteTask.OnRout
         SysApplication.getInstance().addActivity(this);
         setContentView(R.layout.activity_booking_car);
         ButterKnife.bind(this);
-        if (getIntent().getExtras() != null) {
+        String title = getIntent().getStringExtra("title");
+        if (title != null) {
             layoutTab.setVisibility(View.GONE);
-            setTitle("送机");
+            setTitle(title);
         } else {
             getmToolbar().setVisibility(View.GONE);
 
