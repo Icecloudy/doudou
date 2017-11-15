@@ -28,6 +28,7 @@ public class ConfigUtil {
     public static final String PAYLOAD_SUC = "orderSuccess";
     public static final String PAYLOAD_LOGOUT = "offLine";
     public static final String WECHAT_PAY_APPID = "wx20098ab040ba946d";
+    public static final String QQ_SHARE_APPID = "1106379008";
 
     public static int WECHAT_PAY_CODE = 100;
 
