@@ -89,7 +89,7 @@
     <string name="lexing_wechat">微信公众号</string>
     <string name="lexing_sina">新浪微博</string>
     <string name="lexing_email">邮箱</string>
-    <string name="copyright">河北博创信息技术有限公司</string>
+    <string name="copyright">豆豆打车</string>
     <string name="version_info">版本：V%s</string>
     <!--充值-->
     <string name="pay">充值</string>
