@@ -172,7 +172,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="1106379008" />
+                <data android:scheme="1106378904" />
             </intent-filter>
         </activity>
 

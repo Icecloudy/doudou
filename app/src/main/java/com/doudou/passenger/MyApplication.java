@@ -4,12 +4,15 @@ package com.doudou.passenger;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import com.doudou.passenger.data.models.OrderRule;
 import com.iflytek.cloud.SpeechUtility;
 import com.yolanda.nohttp.Logger;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.URLConnectionNetworkExecutor;
 import com.yolanda.nohttp.cache.DBCacheStore;
 import com.yolanda.nohttp.cookie.DBCookieStore;
+
+import java.util.List;
 
 import cn.jpush.android.api.JPushInterface;
 
@@ -54,9 +57,28 @@ public class MyApplication extends android.app.Application {
 		);
 	}
 
-
 	public static MyApplication getInstance() {
 		return instance;
+	}
+
+	private static List<OrderRule> orderRules;
+
+	public static OrderRule getOrderRule(int type) {
+		if (orderRules == null || orderRules.size() <=0) {
+			return new OrderRule();
+		}
+
+		for (int i=0; i<orderRules.size(); i++) {
+			if (orderRules.get(i).getType() == type) {
+				return orderRules.get(i);
+			}
+		}
+
+		return orderRules.get(0);
+	}
+
+	public static void setOrderRules(List<OrderRule> orderRules) {
+		MyApplication.orderRules = orderRules;
 	}
 
 	@Override

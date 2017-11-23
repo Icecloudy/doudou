@@ -114,10 +114,10 @@ public class ShareActivity extends BaseActivity implements HttpListener{
         final Bundle bundle = new Bundle();
 
         bundle.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_DEFAULT);
-        bundle.putString(QQShare.SHARE_TO_QQ_TITLE, "豆豆司机");            // 标题
+        bundle.putString(QQShare.SHARE_TO_QQ_TITLE, "豆豆打车");            // 标题
         bundle.putString(QQShare.SHARE_TO_QQ_SUMMARY, "豆豆打车 - 真人认证美女帅哥高素质司机，高端出行必备");   // 摘要
-        bundle.putString(QQShare.SHARE_TO_QQ_TARGET_URL, "http://a.app.qq.com/o/simple.jsp?pkgname=com.doudou.driver");// 内容地址
-        bundle.putString(QQShare.SHARE_TO_QQ_IMAGE_URL, "http://chuantu.biz/t6/141/1510738991x1861851994.png");// 网络图片地址　　
+        bundle.putString(QQShare.SHARE_TO_QQ_TARGET_URL, "http://a.app.qq.com/o/simple.jsp?pkgname=com.doudou.passenger");// 内容地址
+        bundle.putString(QQShare.SHARE_TO_QQ_IMAGE_URL, "http://chuantu.biz/t6/142/1510802612x1861851994.png");// 网络图片地址　　
         bundle.putString(QQShare.SHARE_TO_QQ_APP_NAME, "豆豆打车");     // 应用名称
         bundle.putString(QQShare.SHARE_TO_QQ_EXT_INT, "其它附加功能");
 

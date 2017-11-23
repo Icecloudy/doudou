@@ -317,8 +317,11 @@ public class BookingCarActivity extends BaseActivity implements RouteTask.OnRout
     @Override
     public void onRouteCalculate(float cost, float distance, int duration) {
         tvDestination.setText(mRouteTask.getEndPoint().address);
-        tvEstimatedCost.setText((int) cost + "元");
-        this.mCost = (int) cost;
+
+        int typeCost = (int)mRouteTask.predictValue(distance, duration, type);
+        tvEstimatedCost.setText((int) typeCost + "元");
+        this.mCost = (int) typeCost;
+
         this.distance = (int) (distance * 1000);
         setBtnBg();
     }

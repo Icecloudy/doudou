@@ -28,7 +28,7 @@ public class ConfigUtil {
     public static final String PAYLOAD_SUC = "orderSuccess";
     public static final String PAYLOAD_LOGOUT = "offLine";
     public static final String WECHAT_PAY_APPID = "wx20098ab040ba946d";
-    public static final String QQ_SHARE_APPID = "1106379008";
+    public static final String QQ_SHARE_APPID = "1106378904";
 
     public static int WECHAT_PAY_CODE = 100;
 
@@ -56,6 +56,7 @@ public class ConfigUtil {
     public static final String SET_DEFAULT_ADDRESS = "/App/AppSystem/setDefaultAddress";
     public static final String GET_DEFAULT_ADDRESS = "/App/AppSystem/getDefaultAddress";
     public static final String GET_NEAR_DRIVER = "/App/Username/getNearbyDriver";
+    public static final String GET_ORDER_CHARGE_PARAMS= "/App/Place/orderChargeParams";
     public static final String SEND_ORDER = "/App/Place/sendOrder";
     public static final String GET_ORDER_DRIVER_POSITION = "/App/Service/getDriverPosition";
 

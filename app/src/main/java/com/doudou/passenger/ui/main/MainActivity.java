@@ -27,6 +27,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.CameraUpdate;
 import com.amap.api.maps.CameraUpdateFactory;
@@ -45,10 +46,12 @@ import com.amap.api.services.geocoder.GeocodeSearch;
 import com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener;
 import com.amap.api.services.geocoder.RegeocodeResult;
 import com.bumptech.glide.Glide;
+import com.doudou.passenger.MyApplication;
 import com.doudou.passenger.R;
 import com.doudou.passenger.SysApplication;
 import com.doudou.passenger.data.UserDataPreference;
 import com.doudou.passenger.data.models.DriverLocationBean;
+import com.doudou.passenger.data.models.OrderRule;
 import com.doudou.passenger.data.models.SendOrderBean;
 import com.doudou.passenger.data.models.UpdateBean;
 import com.doudou.passenger.data.models.UserBean;
@@ -168,6 +171,8 @@ public class MainActivity extends AppCompatActivity
     private static final int SEND_ORDER = 0x002;
     private static final int GET_APP_UPDATE = 0x003;
     private static final int GET_USER = 0x004;
+    private static final int GET_ORDER_CHARGE = 0x005;
+
 
     private int cost;
     private RouteTask mRouteTask;
@@ -207,6 +212,7 @@ public class MainActivity extends AppCompatActivity
         registerMessageReceiver();
 
         getAppUpdata();
+        getOrderChargeParams();
         getUserInfo();
 
         mLocationTask.startSingleLocate();
@@ -464,7 +470,6 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         }
-
     }
 
     /**
@@ -577,7 +582,16 @@ public class MainActivity extends AppCompatActivity
         String costTime = getString(R.string.estimated_cost, (int) mCost) + getString(R.string.estimate_time, duration);
         tvEstimatedCost.setText(costTime);
         cost = (int) mCost;
+    }
 
+    /**
+     * 获取计费规则
+     */
+    private void getOrderChargeParams() {
+        BaseRequest baseRequest = new BaseRequest(ConfigUtil.GET_ORDER_CHARGE_PARAMS)
+                .add("token", userDataPreference.getToken());
+
+        CallServer.getRequestInstance().add(this, GET_ORDER_CHARGE, baseRequest, this, false, false);
     }
 
     /**
@@ -749,6 +763,10 @@ public class MainActivity extends AppCompatActivity
             }
         } else if (what == GET_USER) {
             userDataPreference.setUserInfo(response);
+        } else if (what == GET_ORDER_CHARGE) {
+            JSONArray array = JSON.parseArray(response);
+            List<OrderRule> orderRules = JSON.parseArray(array.getJSONArray(0).toJSONString(), OrderRule.class);
+            MyApplication.getInstance().setOrderRules(orderRules);
         }
     }
 

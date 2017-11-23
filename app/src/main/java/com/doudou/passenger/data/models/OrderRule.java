@@ -1,106 +1,80 @@
 package com.doudou.passenger.data.models;
 
-import java.util.List;
-
 /**
  * Created by Icefly on 2017/11/9.
  */
 
 public class OrderRule {
-    private double began;           //起步价
-    private double mileage;         //公里数单价
-    private double duration;        //时长单价
-    private List<Remote> remote;    //远途公里数
-    private List<Times> times;      //夜间时间
-    private double night;           //夜间行驶费
-    private double additional;      //附加费用
+    private double start_price;          //起步价
+    private double price;                //公里数单价
+    private double time_price;           //时长单价
+    private double remote = 10;          //远途公里数
+    private double long_distance_price;
+    private double night_price;          //夜间行驶费
+    private double extra_price;          //附加费用
+    private int type;
 
-    public double getBegan() {
-        return began;
+    public double getStart_price() {
+        return start_price;
     }
 
-    public void setBegan(double began) {
-        this.began = began;
+    public void setStart_price(double start_price) {
+        this.start_price = start_price;
     }
 
-    public double getMileage() {
-        return mileage;
+    public double getPrice() {
+        return price;
     }
 
-    public void setMileage(double mileage) {
-        this.mileage = mileage;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public double getDuration() {
-        return duration;
+    public double getTime_price() {
+        return time_price;
     }
 
-    public void setDuration(double duration) {
-        this.duration = duration;
+    public void setTime_price(double time_price) {
+        this.time_price = time_price;
     }
 
-    public List<Remote> getRemote() {
+    public double getRemote() {
         return remote;
     }
 
-    public void setRemote(List<Remote> remote) {
+    public void setRemote(double remote) {
         this.remote = remote;
     }
 
-    public List<Times> getTimes() {
-        return times;
+    public double getLong_distance_price() {
+        return long_distance_price;
     }
 
-    public void setTimes(List<Times> times) {
-        this.times = times;
+    public void setLong_distance_price(double long_distance_price) {
+        this.long_distance_price = long_distance_price;
     }
 
-    public double getNight() {
-        return night;
+    public double getNight_price() {
+        return night_price;
     }
 
-    public void setNight(double night) {
-        this.night = night;
+    public void setNight_price(double night_price) {
+        this.night_price = night_price;
     }
 
-    public double getAdditional() {
-        return additional;
+    public double getExtra_price() {
+        return extra_price;
     }
 
-    public void setAdditional(double additional) {
-        this.additional = additional;
+    public void setExtra_price(double extra_price) {
+        this.extra_price = extra_price;
     }
 
-    public static class Remote {
-        private int distance;
-        private double extraCost;
-
-        public int getDistance() {
-            return distance;
-        }
-
-        public void setDistance(int distance) {
-            this.distance = distance;
-        }
-
-        public double getExtraCost() {
-            return extraCost;
-        }
-
-        public void setExtraCost(double extraCost) {
-            this.extraCost = extraCost;
-        }
+    public int getType() {
+        return type;
     }
 
-    public static class Times {
-        private String interval;
-
-        public String getInterval() {
-            return interval;
-        }
-
-        public void setInterval(String interval) {
-            this.interval = interval;
-        }
+    public void setType(int type) {
+        this.type = type;
     }
 }
